@@ -1,0 +1,723 @@
+/*This project is very helpful for who are learn to moderate standard of ADO.NET code .I built this project for find out the particular 
+employee's details and their city details.We can use this project as many other platform.*/
+/* THis is the design part code in windows form application*/
+namespace windows_form_using_database
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textempid = new System.Windows.Forms.TextBox();
+            this.textname = new System.Windows.Forms.TextBox();
+            this.textcity = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button6 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textcityid = new System.Windows.Forms.TextBox();
+            this.textcityname = new System.Windows.Forms.TextBox();
+            this.city_add = new System.Windows.Forms.Button();
+            this.city_save = new System.Windows.Forms.Button();
+            this.city_update = new System.Windows.Forms.Button();
+            this.city_view = new System.Windows.Forms.Button();
+            this.city_delete = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "empid";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 119);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "city";
+            // 
+            // textempid
+            // 
+            this.textempid.Location = new System.Drawing.Point(105, 12);
+            this.textempid.Name = "textempid";
+            this.textempid.Size = new System.Drawing.Size(100, 20);
+            this.textempid.TabIndex = 3;
+            // 
+            // textname
+            // 
+            this.textname.Location = new System.Drawing.Point(105, 58);
+            this.textname.Name = "textname";
+            this.textname.Size = new System.Drawing.Size(100, 20);
+            this.textname.TabIndex = 4;
+            // 
+            // textcity
+            // 
+            this.textcity.Location = new System.Drawing.Point(105, 119);
+            this.textcity.Name = "textcity";
+            this.textcity.Size = new System.Drawing.Size(100, 20);
+            this.textcity.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(247, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "add";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(286, 85);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "delete";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(247, 53);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "update";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(348, 56);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "view";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(222, 119);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(348, 10);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "save";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(24, 235);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(355, 197);
+            this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(115, 459);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(189, 23);
+            this.button6.TabIndex = 13;
+            this.button6.Text = " UPDATE EMPLOYEE DATA";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(646, 235);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(333, 197);
+            this.dataGridView2.TabIndex = 14;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(739, 450);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(162, 23);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "UPDATE CITY DATA";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(590, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "cityid";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(593, 58);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "cityname";
+            // 
+            // textcityid
+            // 
+            this.textcityid.Location = new System.Drawing.Point(707, 9);
+            this.textcityid.Name = "textcityid";
+            this.textcityid.Size = new System.Drawing.Size(100, 20);
+            this.textcityid.TabIndex = 18;
+            // 
+            // textcityname
+            // 
+            this.textcityname.Location = new System.Drawing.Point(707, 58);
+            this.textcityname.Name = "textcityname";
+            this.textcityname.Size = new System.Drawing.Size(100, 20);
+            this.textcityname.TabIndex = 19;
+            // 
+            // city_add
+            // 
+            this.city_add.Location = new System.Drawing.Point(836, 10);
+            this.city_add.Name = "city_add";
+            this.city_add.Size = new System.Drawing.Size(75, 23);
+            this.city_add.TabIndex = 20;
+            this.city_add.Text = "add";
+            this.city_add.UseVisualStyleBackColor = true;
+            this.city_add.Click += new System.EventHandler(this.city_add_Click);
+            // 
+            // city_save
+            // 
+            this.city_save.Location = new System.Drawing.Point(939, 9);
+            this.city_save.Name = "city_save";
+            this.city_save.Size = new System.Drawing.Size(75, 23);
+            this.city_save.TabIndex = 21;
+            this.city_save.Text = "save";
+            this.city_save.UseVisualStyleBackColor = true;
+            this.city_save.Click += new System.EventHandler(this.city_save_Click);
+            // 
+            // city_update
+            // 
+            this.city_update.Location = new System.Drawing.Point(836, 58);
+            this.city_update.Name = "city_update";
+            this.city_update.Size = new System.Drawing.Size(75, 23);
+            this.city_update.TabIndex = 22;
+            this.city_update.Text = "update";
+            this.city_update.UseVisualStyleBackColor = true;
+            this.city_update.Click += new System.EventHandler(this.city_update_Click);
+            // 
+            // city_view
+            // 
+            this.city_view.Location = new System.Drawing.Point(939, 58);
+            this.city_view.Name = "city_view";
+            this.city_view.Size = new System.Drawing.Size(75, 23);
+            this.city_view.TabIndex = 23;
+            this.city_view.Text = "view";
+            this.city_view.UseVisualStyleBackColor = true;
+            this.city_view.Click += new System.EventHandler(this.city_view_Click);
+            // 
+            // city_delete
+            // 
+            this.city_delete.Location = new System.Drawing.Point(904, 109);
+            this.city_delete.Name = "city_delete";
+            this.city_delete.Size = new System.Drawing.Size(75, 23);
+            this.city_delete.TabIndex = 24;
+            this.city_delete.Text = "delete";
+            this.city_delete.UseVisualStyleBackColor = true;
+            this.city_delete.Click += new System.EventHandler(this.city_delete_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1047, 515);
+            this.Controls.Add(this.city_delete);
+            this.Controls.Add(this.city_view);
+            this.Controls.Add(this.city_update);
+            this.Controls.Add(this.city_save);
+            this.Controls.Add(this.city_add);
+            this.Controls.Add(this.textcityname);
+            this.Controls.Add(this.textcityid);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textcity);
+            this.Controls.Add(this.textname);
+            this.Controls.Add(this.textempid);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textempid;
+        private System.Windows.Forms.TextBox textname;
+        private System.Windows.Forms.TextBox textcity;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textcityid;
+        private System.Windows.Forms.TextBox textcityname;
+        private System.Windows.Forms.Button city_add;
+        private System.Windows.Forms.Button city_save;
+        private System.Windows.Forms.Button city_update;
+        private System.Windows.Forms.Button city_view;
+        private System.Windows.Forms.Button city_delete;
+    }
+}
+
+
+
+----------------------------------------------------------------------------------------------------------------
+/*this is the details as well as city database*/
+create database employee
+use employee
+create table details(empid int not null,
+name varchar(50),
+city varchar(50));
+select * from details;
+insert into details (empid,name,city) values(1,'sourav','kolkata'),(2,'soumik','pune'),(3,'roni','mumbai'),(4,'tiger','mumbai'),
+(5,'ajay','maharashtra'),(6,'yuvraj','punjab');
+create table city(cityid int not null,
+name varchar(50));
+select * from city
+insert into city (cityid,name) values(1,'kolkata'),(2,'pune'),(3,'mumbai'),(4,'mumbai'),
+(5,'maharashtra'),(6,'punjab');
+-------------------------------------------------------------------------------------------------------------------------------
+/* this is for backend program connection with sqlserver and working program of each component of windows form application*/
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.IO;
+using System.Data.SqlClient;
+
+namespace windows_form_using_database
+{
+    public partial class Form1 : Form
+    {
+        SqlConnection con = null;
+        SqlCommand cm;
+        SqlDataAdapter sd;
+        DataSet ds;
+        public Form1()
+        {
+            InitializeComponent();
+
+            con = new SqlConnection("server=LAPTOP-GU7F36C5;initial catalog=employee;integrated security=true");
+            
+        }
+        void reset()
+        {
+            textempid.Text = textcity.Text = textname.Text =textcityid.Text=textcityname.Text= "";
+            textempid.Focus();
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string id = textempid.Text;
+                string cmd = string.Format("delete from details where empid={0}", id);
+                cm = new SqlCommand(cmd, con);
+                con.Open();
+                cm.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("delete opperation successful","Messege", MessageBoxButtons.OK);
+                reset();
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                reset();
+            
+
+
+            sd = new SqlDataAdapter("select * from city;select *from details", con);
+               
+
+                ds = new DataSet();
+                sd.Fill(ds);//sd.Fill(ds,"location");
+
+            comboBox1.DisplayMember = "cityid";
+                comboBox1.ValueMember = "name";
+            comboBox1.DataSource = ds.Tables[0];//comboBox1.DataSource = ds.Tables["location];
+            dataGridView1.DataSource = ds.Tables[1];
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                reset();
+                cm = new SqlCommand("select max(empid)+1 from details", con);
+                con.Open();
+                int p = (int)cm.ExecuteScalar();
+                con.Close();
+                textempid.Text = p.ToString();
+                MessageBox.Show("add opperation successful", "Messege", MessageBoxButtons.OK);
+            }
+            catch(Exception ex){
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string id = textempid.Text;
+                string name = textname.Text;
+                string city = textcity.Text;
+
+                string cmd = string.Format("insert into details(empid,name,city) values({0},'{1}','{2}')", id, name, city);
+                cm = new SqlCommand(cmd, con);
+                con.Open();
+                cm.ExecuteNonQuery();
+                con.Close();
+                reset();
+                MessageBox.Show("save opperation successful", "Messege", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            reset();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string id = textempid.Text;
+                string cmd = string.Format("select * from details where empid=@empid");
+                cm = new SqlCommand(cmd, con);
+                cm.Parameters.Add("@empid", SqlDbType.Int);
+                cm.Parameters["@empid"].Value = id;
+                con.Open();
+                SqlDataReader sdr = cm.ExecuteReader();
+                if (sdr.Read())
+                {
+                    textname.Text = sdr[1].ToString();
+                    textcity.Text = sdr[2].ToString();
+                    MessageBox.Show("view opperation successful", "Messege", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("this empid is not valid");
+                }
+
+
+                con.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            reset();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string id = textempid.Text;
+                String name = textname.Text;
+                string city = textcity.Text;
+                string cmd = string.Format("update  details set name='{0}',city='{1}' where empid={2}", name, city, id);
+                cm = new SqlCommand(cmd, con);
+                con.Open();
+                cm.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("update opperation successful", "Messege", MessageBoxButtons.OK);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            reset();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //textcity.Text = "";
+            reset();
+            
+            textcity.Text = comboBox1.SelectedValue.ToString();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //textempid.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            //textname.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            //textcity.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                sd = new SqlDataAdapter("select *from details", con);
+
+                ds = new DataSet();
+                sd.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+                MessageBox.Show("datagrid is updated");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void city_add_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                reset();
+                cm = new SqlCommand("select max(cityid)+1 from city", con);
+                con.Open();
+                int p = (int)cm.ExecuteScalar();
+                con.Close();
+                textcityid.Text = p.ToString();
+                MessageBox.Show("add opperation  of city successful", "Messege", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void city_view_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string id = textcityid.Text;
+                string cmd = string.Format("select * from city where cityid=@cityid");
+                cm = new SqlCommand(cmd, con);
+                cm.Parameters.Add("@cityid", SqlDbType.Int);
+                cm.Parameters["@cityid"].Value = id;
+                con.Open();
+                SqlDataReader sdr = cm.ExecuteReader();
+                if (sdr.Read())
+                {
+                    textcityname.Text = sdr[1].ToString();
+                    
+                    MessageBox.Show("view opperation of city successful", "Messege", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("this cityid is not valid");
+                }
+
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            reset();
+        }
+
+        private void city_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string id = textcityid.Text;
+                string name = textcityname.Text;
+                
+                string cmd = string.Format("insert into city(cityid,name) values({0},'{1}')", id, name);
+                cm = new SqlCommand(cmd, con);
+                con.Open();
+                cm.ExecuteNonQuery();
+                con.Close();
+                reset();
+                MessageBox.Show("save opperation  of city successful", "Messege", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            reset();
+        }
+
+        private void city_update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string id = textcityid.Text;
+                String name = textcityname.Text;
+              
+                string cmd = string.Format("update  details set name='{0}' where cityid={2}", name, id);
+                cm = new SqlCommand(cmd, con);
+                con.Open();
+                cm.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("update opperation of city successful", "Messege", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            reset();
+        }
+
+        private void city_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string id = textcityid.Text;
+                string cmd = string.Format("delete from city where cityid={0}", id);
+                cm = new SqlCommand(cmd, con);
+                con.Open();
+                cm.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("delete opperation of city successful", "Messege", MessageBoxButtons.OK);
+                reset();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                sd = new SqlDataAdapter("select *from city", con);
+
+                ds = new DataSet();
+                sd.Fill(ds);
+                dataGridView2.DataSource = ds.Tables[0];
+                MessageBox.Show("datagrid of city is updated");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+    }
+}
